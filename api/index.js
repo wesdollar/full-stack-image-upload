@@ -13,7 +13,7 @@ app.use(fileUpload());
 app.use(express.json());
 
 app.get("/", (req, res) =>
-  res.send("Hello World! Because we always say hello.")
+  res.send("Hello World! Because we always say hello :wave:")
 );
 
 app.get("/files", (req, res) => {
