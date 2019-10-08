@@ -66,5 +66,5 @@ Server
 **returns** `response` with `json`
 
 ### POST /find
-**param** `searchTerm`: term to match against filenames
+**param** `searchTerm`: term to match against filenames <br />
 **returns** `array` of files
