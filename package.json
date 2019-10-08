@@ -1,0 +1,259 @@
+{
+  "name": "file-upload-ui",
+  "version": "1.0.0",
+  "author": "Wes Dollar",
+  "private": true,
+  "dependencies": {
+    "polished": "^3.4.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-redux": "^7.1.0",
+    "react-scripts": "3.1.1",
+    "react-test-renderer": "^16.8.6",
+    "styled-components": "^4.3.2",
+    "react-router-dom": "^5.0.0"
+  },
+  "scripts": {
+    "start": "npx concurrently \"npm run start:api\" \"npm run start:react\"",
+    "build": "npm run npm:install:react && npm run react:build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint": "eslint src/**/*.jsx src/**/*.js",
+    "react": "npm run start",
+    "react:build": "react-scripts build",
+    "pre-commit": "pretty-quick --staged && npm run lint",
+    "start:api": "cd api && node index.js",
+    "start:react": "react-scripts start",
+    "install:react": "npm i",
+    "install:server": "cd api && npm i",
+    "install:all": "npm run install:react && npm run install:server",
+    "quickstart": "npm run install:all && npm run start"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "eslint:recommended",
+      "plugin:react/recommended",
+      "prettier",
+      "prettier/react",
+      "plugin:jsx-a11y/recommended"
+    ],
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true
+      },
+      "ecmaVersion": 2018,
+      "sourceType": "module"
+    },
+    "plugins": [
+      "prettier",
+      "react"
+    ],
+    "rules": {
+      "prettier/prettier": "error",
+      "object-shorthand": [
+        "error",
+        "always"
+      ],
+      "prefer-const": [
+        "error",
+        {
+          "destructuring": "any",
+          "ignoreReadBeforeAssign": false
+        }
+      ],
+      "prefer-destructuring": [
+        "error",
+        {
+          "array": true,
+          "object": true
+        },
+        {
+          "enforceForRenamedProperties": false
+        }
+      ],
+      "no-use-before-define": [
+        "error",
+        {
+          "functions": true,
+          "classes": true
+        }
+      ],
+      "no-undefined": "error",
+      "no-undef-init": "error",
+      "dot-notation": "error",
+      "no-else-return": [
+        "error",
+        {
+          "allowElseIf": false
+        }
+      ],
+      "eqeqeq": [
+        "error",
+        "smart"
+      ],
+      "no-implicit-coercion": "error",
+      "no-multi-spaces": "error",
+      "no-return-assign": "error",
+      "no-return-await": "error",
+      "require-await": "error",
+      "no-nested-ternary": "error",
+      "block-scoped-var": "error",
+      "no-duplicate-imports": "error",
+      "no-var": "error",
+      "prefer-spread": "error",
+      "prefer-template": "error",
+      "padding-line-between-statements": [
+        "error",
+        {
+          "blankLine": "always",
+          "prev": "*",
+          "next": "return"
+        },
+        {
+          "blankLine": "always",
+          "prev": "*",
+          "next": "switch"
+        },
+        {
+          "blankLine": "always",
+          "prev": "*",
+          "next": "if"
+        },
+        {
+          "blankLine": "always",
+          "prev": "*",
+          "next": "export"
+        },
+        {
+          "blankLine": "any",
+          "prev": "export",
+          "next": "export"
+        },
+        {
+          "blankLine": "always",
+          "prev": "*",
+          "next": "try"
+        },
+        {
+          "blankLine": "always",
+          "prev": "*",
+          "next": "while"
+        },
+        {
+          "blankLine": "always",
+          "prev": "import",
+          "next": "*"
+        },
+        {
+          "blankLine": "never",
+          "prev": "import",
+          "next": "import"
+        },
+        {
+          "blankLine": "always",
+          "prev": [
+            "const",
+            "let",
+            "var"
+          ],
+          "next": "*"
+        },
+        {
+          "blankLine": "any",
+          "prev": [
+            "const",
+            "let",
+            "var"
+          ],
+          "next": [
+            "const",
+            "let",
+            "var"
+          ]
+        }
+      ],
+      "max-statements-per-line": [
+        "error",
+        {
+          "max": 1
+        }
+      ],
+      "max-params": [
+        "error",
+        3
+      ],
+      "max-depth": [
+        "error",
+        3
+      ],
+      "no-magic-numbers": [
+        "error",
+        {
+          "enforceConst": true
+        }
+      ],
+      "no-alert": "error",
+      "max-classes-per-file": [
+        "error",
+        1
+      ],
+      "curly": "error",
+      "no-console": "warn",
+      "multiline-comment-style": [
+        "error",
+        "starred-block"
+      ],
+      "react/destructuring-assignment": [
+        2
+      ],
+      "react/jsx-handler-names": [
+        1
+      ],
+      "react/no-direct-mutation-state": [
+        1
+      ],
+      "react/no-this-in-sfc": [
+        1
+      ],
+      "react/no-unused-prop-types": [
+        1
+      ],
+      "react/no-unused-state": [
+        1
+      ],
+      "react/jsx-pascal-case": [
+        1
+      ]
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "proxy": "http://localhost:5000",
+  "devDependencies": {
+    "eslint-config-prettier": "^6.1.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.3",
+    "husky": "^3.0.4",
+    "mocha": "^6.1.4",
+    "prettier": "^1.18.2",
+    "pretty-quick": "^1.11.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run pre-commit"
+    }
+  }
+}
