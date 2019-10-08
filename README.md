@@ -52,17 +52,17 @@ Server
 * `express-validator` - Validate user input
 
 ## API
-*WARNING* - API is **not** production-ready. Please see improvements sections for more info.
+**WARNING** - API is **not** production-ready. Please see improvements sections for more info.
 
 ### GET /files
 **returns** list of all files in uploads directory
 
 ### POST /upload
-**param** `imageUpload`: file of type JPG or PNG 
+**param** `imageUpload`: file of type JPG or PNG <br />
 **returns** `response` with `json`
 
 ### POST /delete
-**param** `filename`: filename to remove from uploads directory
+**param** `filename`: filename to remove from uploads directory <br />
 **returns** `response` with `json`
 
 ### POST /find
