@@ -55,7 +55,7 @@ Server
 **WARNING** - API is **not** production-ready. Please see improvements sections for more info.
 
 ### GET /files
-**returns** list of all files in uploads directory
+**returns** `array` of all files in uploads directory
 
 ### POST /upload
 **param** `imageUpload`: file of type JPG or PNG <br />
