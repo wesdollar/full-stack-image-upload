@@ -3,7 +3,7 @@
 ## Installation
 Run the following commands from you preferred development directory:
 * `git clone https://github.com/wesdollar/wes-2019-10-08.git`
-* `cd wes-2019-10-08`
+* `cd full-stack-image-upload`
 * `npm run quickstart`
 
 *NOTE:* please ensure no other services are running on ports `3000` or `5000` before running `npm run quickstart`.
