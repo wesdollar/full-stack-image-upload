@@ -1,4 +1,4 @@
-# wes - 2019-10-08
+# Full-Stack Image Upload
 
 ## Installation
 Run the following commands from you preferred development directory:
